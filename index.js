@@ -15,4 +15,4 @@ module.exports = function randomStr(length = 1, caseType = 'lower') {
     } 
     
     return ( caseType == 'upper' ? randomString.toUpperCase() : randomString);
-} 
+}
