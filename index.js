@@ -1,5 +1,7 @@
-const {} = require('char');
+// Importing array of special characters
+const { special } = require('char');
 
+// Main export 
 module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
         if(type.toLower() == 'alphabets') {
@@ -30,7 +32,7 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
         }
 
         if(type.toLower() == 'special') {
-
+            return randomSpecialChar(length)
         }
 
         throw new Error(`unrecognized argument "${type}"`)
@@ -79,9 +81,9 @@ function randomSpecialChar(length) {
     if(length > 1) {
         let result = '';
         for (i = 0; i < length; i++) {
-            result += String.fromCharCode(Math.floor(Math.random() * 9) + 48);
+            result += special[Math.floor(Math.random() * 32)];
         }
         return result;
     }
-    return String.fromCharCode(Math.floor(Math.random() * 9) + 48);
+    return special[Math.floor(Math.random() * 32)];
 }
