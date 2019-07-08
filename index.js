@@ -4,7 +4,9 @@ const { special } = require('char');
 // Main export 
 module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
-        if(type.toLower() == 'alphabets') {
+
+
+        if(type.toLowerCase() == 'alphabets') {
             return (uppercase ? randomAlphabets(length).toUpperCase() : randomAlphabets(length))  
         }
         
@@ -12,7 +14,7 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
             return randomNumber(length)
         }
 
-        if(type.toLower() == 'string') {
+        if(type.toLowerCase() == 'string') {
             let result = '';
             for (let i = 0; i < length; i++) {
                 let chooseFrom = Math.floor(Math.random() * 2) * 1;
@@ -27,11 +29,11 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
             return (uppercase ? result.toUpperCase() : result);
         }
 
-        if(type.toLower() == 'asciimix') {
+        if(type.toLowerCase() == 'asciimix') {
             return (uppercase ? randomAsciiChar(length).toUpperCase() : randomAsciiChar(length))  
         }
 
-        if(type.toLower() == 'special') {
+        if(type.toLowerCase() == 'special') {
             return randomSpecialChar(length)
         }
 
