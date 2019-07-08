@@ -1,3 +1,5 @@
+const {} = require('char');
+
 module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
         if(type.toLower() == 'alphabets') {
