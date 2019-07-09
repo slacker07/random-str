@@ -6,7 +6,7 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
 
         if(length > 1e6 || length < 1) {
-            throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+            throw `Length range of boundry \n Max ${1e6}, Min 1`;
         }
 
         if(type.toLowerCase() == 'alphabet') {
@@ -123,8 +123,6 @@ function generatePattern(uppercase = false, ...pattern) {
         }
         if(/\dsp/.test(pattern)) {
             result += randomSpecialChar(pattern.match(/\d+/)[0])
-        } else {
-            throw new Error(`Pattern Not Recognzed, Please take a look at docs`);
         }
     }
 
