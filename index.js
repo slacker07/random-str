@@ -6,7 +6,7 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
 
 
-        if(type.toLowerCase() == 'alphabets') {
+        if(type.toLowerCase() == 'alphabet') {
             return (uppercase ? randomAlphabets(length).toUpperCase() : randomAlphabets(length))  
         }
         
