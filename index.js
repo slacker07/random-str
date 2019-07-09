@@ -106,25 +106,29 @@ function randomSpecialChar(length) {
 }
 
 function generatePattern(uppercase = false, ...pattern) {
-    const patternArray = [...pattern];
-    let result = '';
-    for (pattern of patternArray) {
-        if(/\ds/.test(pattern)) {
-            result += generate('string', pattern.match(/\d+/)[0])
+    try {
+        const patternArray = [...pattern];
+        let result = '';
+        for (pattern of patternArray) {
+            if(/\ds/.test(pattern)) {
+                result += generate('string', pattern.match(/\d+/)[0])
+            }
+            if(/\da/.test(pattern)) {
+                result += randomAlphabets(pattern.match(/\d+/)[0])
+            }
+            if(/\dn/.test(pattern)) {
+                result += randomNumber(pattern.match(/\d+/)[0])
+            }
+            if(/\dam/.test(pattern)) {
+                result += randomAsciiChar(pattern.match(/\d+/)[0])
+            }
+            if(/\dsp/.test(pattern)) {
+                result += randomSpecialChar(pattern.match(/\d+/)[0])
+            }
         }
-        if(/\da/.test(pattern)) {
-            result += randomAlphabets(pattern.match(/\d+/)[0])
-        }
-        if(/\dn/.test(pattern)) {
-            result += randomNumber(pattern.match(/\d+/)[0])
-        }
-        if(/\dam/.test(pattern)) {
-            result += randomAsciiChar(pattern.match(/\d+/)[0])
-        }
-        if(/\dsp/.test(pattern)) {
-            result += randomSpecialChar(pattern.match(/\d+/)[0])
-        }
-    }
 
-    return ( uppercase ? result.toUpperCase() : result)
+        return ( uppercase ? result.toUpperCase() : result)
+    } catch (e) {
+        console.log(e);
+    }
 }
