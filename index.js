@@ -5,6 +5,9 @@ const { special } = require('char');
 module.exports = function generate(type='string', length=1, uppercase=false) {
     try {
 
+        if(length > 1e6 || length < 1) {
+            throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+        }
 
         if(type.toLowerCase() == 'alphabet') {
             return (uppercase ? randomAlphabets(length).toUpperCase() : randomAlphabets(length))  
@@ -44,6 +47,9 @@ module.exports = function generate(type='string', length=1, uppercase=false) {
 }
 
 function randomAlphabets(length = 1) {
+    if(length > 1e6 || length < 1) {
+        throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+    }
     if(length > 1) {
         let result = '';
         for (i = 0; i < length; i++) {
@@ -56,6 +62,9 @@ function randomAlphabets(length = 1) {
 }
 
 function randomNumber(length) {
+    if(length > 1e6 || length < 1) {
+        throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+    }
     if(length > 1) {
         let result = '';
         for (i = 0; i < length; i++) {
@@ -67,6 +76,9 @@ function randomNumber(length) {
 }
 
 function randomAsciiChar(length = 1) {
+    if(length > 1e6 || length < 1) {
+        throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+    }
     if(length > 1) {
         let result = '';
         for (i = 0; i < length; i++) {
@@ -80,6 +92,9 @@ function randomAsciiChar(length = 1) {
 
 
 function randomSpecialChar(length) {
+    if(length > 1e6 || length < 1) {
+        throw new RangeError(`Length range of boundry \n Max ${1e6}, Min 1`)
+    }
     if(length > 1) {
         let result = '';
         for (i = 0; i < length; i++) {
@@ -90,7 +105,7 @@ function randomSpecialChar(length) {
     return special[Math.floor(Math.random() * 32)];
 }
 
-function generatePatter(uppercase = false, ...pattern) {
+function generatePattern(uppercase = false, ...pattern) {
     const patternArray = [...pattern];
     let result = '';
     for (pattern of patternArray) {
@@ -108,6 +123,8 @@ function generatePatter(uppercase = false, ...pattern) {
         }
         if(/\dsp/.test(pattern)) {
             result += randomSpecialChar(pattern.match(/\d+/)[0])
+        } else {
+            throw new Error(`Pattern Not Recognzed, Please take a look at docs`);
         }
     }
 
