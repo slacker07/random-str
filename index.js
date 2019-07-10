@@ -1,5 +1,5 @@
 // Importing array of special characters
-const { special } = require('char');
+const { special } = require('./char');
 
 // Main export 
 module.exports = function generate(type='string', length=1, uppercase=false) {

@@ -1,0 +1,27 @@
+{
+  "name": "random-str",
+  "version": "0.0.1",
+  "description": "stupid random string",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest *.test.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mr_bhat/random-str.git"
+  },
+  "keywords": [
+    "random"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mr_bhat/random-str/issues"
+  },
+  "homepage": "https://gitlab.com/mr_bhat/random-str#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jest": "^24.8.0"
+  }
+}
