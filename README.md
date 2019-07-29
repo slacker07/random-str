@@ -50,8 +50,8 @@ Simple, but more useful than my preivious npm libs.
 
     const tryingtoBreak = randomStr('lol')
     // Error >> 
-##Licence
+## Licence
 
-Do whatever you want with it, hell yeah its FREE.
+`Do whatever you want with it, hell yeah its FREE`.
 
-Made with **stupidity**
+Made with **`stupidity`**
