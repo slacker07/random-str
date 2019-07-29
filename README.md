@@ -1,11 +1,11 @@
-# random-str
+# Randify
 
 >Generates Random `Number` / Random `Alphabets` / Random `String` / Random `Ascii` Character / Random `Special` Character
 
 Simple, but more useful than my preivious npm libs.
 
 ## Install with npm
-    $ npm install --save random-str
+    $ npm install --save randify 
  
 
 ## Usage
@@ -31,24 +31,24 @@ Simple, but more useful than my preivious npm libs.
     
 ## Example
 
-    const randomStr = require('random-str');
+    const randify = require('randify');
 
-    const randomAlphabets = randomStr('alphabet', 100, false)
+    const randomAlphabets = randify('alphabet', 100, false)
     // output >> 
 
-    const randomNumber = randomStr('number', 100)
+    const randomNumber = randify('number', 100)
     // output >>
 
-    const randomString = randomStr('string', 100, true)
+    const randify = randify('string', 100, true)
     // output >>
 
-    const randomAscii = randomStr('asciimix', 20, false)
+    const randomAscii = randify('asciimix', 20, false)
     // output >>
 
-    const specialString = randomStr('special', 13, false)
+    const specialString = randify('special', 13, false)
     // output >> 
 
-    const tryingtoBreak = randomStr('lol')
+    const tryingtoBreak = randify('lol')
     // Error >> 
 ## Licence
 

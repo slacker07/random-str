@@ -1,7 +1,7 @@
 {
-  "name": "random-str",
-  "version": "0.0.1",
-  "description": "stupid random string",
+  "name": "randify",
+  "version": "1.0.0",
+  "description": "Simple and useful random string generator! Generate random string of your choice [alphabet, numbers, mixed, specail...]",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -9,22 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/mr_bhat/random-str.git"
+    "url": "https://github.com/slacker07/random-str.git"
   },
   "keywords": [
     "random"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Aravinda Bhat (https://github.com/slacker07)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/mr_bhat/random-str/issues"
+    "url": "https://github.com/slacker07/random-str/issues"
   },
-  "homepage": "https://gitlab.com/mr_bhat/random-str#readme",
+  "homepage": "https://github.com/slacker07/random-str",
   "devDependencies": {
     "chai": "^4.2.0",
     "jest": "^24.8.0"
   },
   "dependencies": {
     "chalk": "^2.4.2"
-  }
+  },
+  "files": ["index.js", "char.js"]
 }
